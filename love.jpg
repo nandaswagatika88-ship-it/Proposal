@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Love You ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ffb6d9,#ffeaf4);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+overflow:hidden;
+}
+
+.card{
+width:90%;
+max-width:420px;
+background:white;
+padding:25px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+animation:pop 1s ease;
+}
+
+@keyframes pop{
+from{
+transform:scale(.5);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+img{
+width:100%;
+border-radius:20px;
+margin-bottom:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+h1{
+font-size:34px;
+color:#ff2d75;
+margin-bottom:15px;
+}
+
+p{
+font-size:18px;
+line-height:1.8;
+color:#555;
+}
+
+.heart{
+position:fixed;
+font-size:24px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px);
+opacity:1;
+}
+100%{
+transform:translateY(120vh);
+opacity:0;
+}
+}
+
+.confetti{
+position:fixed;
+width:10px;
+height:10px;
+animation:confetti 4s linear infinite;
+}
+
+@keyframes confetti{
+0%{
+transform:translateY(-100px) rotate(0deg);
+}
+100%{
+transform:translateY(120vh) rotate(720deg);
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<img src="images/love.jpg">
+
+<h1>YAYYYYY!! ❤️🥹</h1>
+
+<p>
+
+I LOVE YOU SOOO MUCHHH KIDDOOO!! 🥹❤️🫶
+
+<br><br>
+
+You just made me the happiest person alive. 🌍💖
+
+<br><br>
+
+Thank you for giving me a chance to love you.
+
+<br><br>
+
+I promise to always care for you, support you, make you smile and stay beside you.
+
+<br><br>
+
+❤️ Forever Starts Today ❤️
+
+</p>
+
+</div>
+
+<script>
+
+function hearts(){
+
+const h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤️";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.animationDuration=(Math.random()*3+3)+"s";
+
+document.body.appendChild(h);
+
+setTimeout(()=>{
+h.remove();
+},6000);
+
+}
+
+setInterval(hearts,200);
+
+const colors=["#ff2d75","#ff69b4","#ff1493","#ff4d6d","#ff8fab"];
+
+function confetti(){
+
+const c=document.createElement("div");
+
+c.className="confetti";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.background=colors[Math.floor(Math.random()*colors.length)];
+
+c.style.animationDuration=(Math.random()*3+2)+"s";
+
+document.body.appendChild(c);
+
+setTimeout(()=>{
+c.remove();
+},5000);
+
+}
+
+setInterval(confetti,120);
+
+</script>
+
+</body>
+</html>
